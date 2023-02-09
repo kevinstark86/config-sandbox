@@ -10,7 +10,7 @@
     "prepare": "husky install",
     "prettier:check": "prettier --check .",
     "prettier:write": "prettier --write .",
-    "pre-commit": "tsc && npm run lint && npm run prettier:--write && npm run prettier:check"
+    "pre-commit": "tsc && npm run lint && npm run prettier:write && npm run prettier:check"
   },
   "dependencies": {
     "@next/font": "13.1.6",

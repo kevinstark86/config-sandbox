@@ -9,6 +9,5 @@
   "bracketSpacing": false,
   "trailingComma": "es5",
   "semi": true,
-  "jsxSingleQuote": false,
-  "jsxBracketSameLine": false
+  "jsxSingleQuote": false
 }
