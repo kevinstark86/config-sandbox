@@ -1,9 +1,22 @@
 {
-  "extends": ["next/core-web-vitals", "airbnb", "airbnb-typescript", "prettier"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:storybook/recommended",
+    "airbnb",
+    "airbnb-typescript",
+    "prettier"
+  ],
   "plugins": ["testing-library"],
   "parserOptions": {"project": "./tsconfig.json"},
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "react/default-props-match-prop-types": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [".storybook/**", "stories/**"]
+      }
+    ]
   }
 }
