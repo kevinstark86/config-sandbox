@@ -1,20 +1,7 @@
-type BtnProps = {
-  variant: string;
-  disabled: boolean;
-  children: React.ReactNode;
-};
+import {BtnProps} from './types';
+import {primaryStyle, secondaryStyle} from './styles';
 
-type StyleType = {
-  backgroundColor: string;
-  padding: string;
-};
-
-function Button({variant, disabled, children}: BtnProps) {
-  const primaryStyle: StyleType = {
-    backgroundColor: 'blue',
-    padding: '20px 40px',
-  };
-  const secondaryStyle = {};
+function Button({variant, disabled, children}: BtnProps): JSX.Element {
   return (
     <button
       style={variant === 'primary' ? primaryStyle : secondaryStyle}
