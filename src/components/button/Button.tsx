@@ -3,9 +3,11 @@ import styled from 'styled-components';
 import {BtnProps} from './types';
 
 const Wrapper = styled.button`
-  padding: 10px, 40px;
+  padding: 10px 40px;
   border: none;
   border-radius: 5px;
+
+  color: ivory;
   .primary {
     background-color: lightblue;
     color: ivory;
