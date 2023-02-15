@@ -1,13 +1,24 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import {BtnProps} from './types';
 
 const Wrapper = styled.button<BtnProps>`
   padding: 10px 40px;
-  border: none;
   border-radius: 5px;
-  background-color: ${props => (props.variant === 'primary' ? 'blue' : 'red')};
-  color: ivory;
+  ${props =>
+    props.variant === 'primary' &&
+    css`
+      background-color: blue;
+      color: ivory;
+      border: none;
+    `}
+  ${props =>
+    props.variant === 'secondary' &&
+    css`
+      border: 2px solid blue;
+      color: blue;
+      background-color: transparent;
+    `}
 `;
 
 function Button({variant, disabled, children}: BtnProps): JSX.Element {
