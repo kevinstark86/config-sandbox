@@ -17,12 +17,28 @@ export const Primary = Template.bind({});
 Primary.args = {
   variant: 'primary',
   disabled: false,
-  children: 'Click Me',
+  children: 'Primary',
 };
 export const Secondary = Template.bind({});
 
 Secondary.args = {
   variant: 'secondary',
   disabled: false,
-  children: 'Click Me',
+  children: 'Secondary',
+};
+
+export const Warning = Template.bind({});
+
+Warning.args = {
+  variant: 'warning',
+  disabled: false,
+  children: 'Warning',
+};
+
+export const Disabled = Template.bind({});
+
+Disabled.args = {
+  variant: 'primary',
+  disabled: true,
+  children: 'Disabled',
 };

@@ -2,6 +2,7 @@
 import styled, {css} from 'styled-components';
 import {BtnProps} from './types';
 
+// Component Styling
 const Wrapper = styled.button<BtnProps>`
   padding: 10px 40px;
   border-radius: 5px;
@@ -11,6 +12,9 @@ const Wrapper = styled.button<BtnProps>`
       background-color: blue;
       color: ivory;
       border: none;
+      &:hover {
+        cursor: pointer;
+      }
     `}
   ${props =>
     props.variant === 'secondary' &&
@@ -18,6 +22,9 @@ const Wrapper = styled.button<BtnProps>`
       border: 2px solid blue;
       color: blue;
       background-color: transparent;
+      &:hover {
+        cursor: pointer;
+      }
     `}
     ${props =>
     props.variant === 'warning' &&
@@ -25,6 +32,16 @@ const Wrapper = styled.button<BtnProps>`
       border: none;
       color: ivory;
       background-color: red;
+      &:hover {
+        cursor: pointer;
+      }
+    `}
+    ${props =>
+    props.disabled === true &&
+    css`
+      background-color: grey;
+      border: none;
+      color: ivory:
     `}
 `;
 
