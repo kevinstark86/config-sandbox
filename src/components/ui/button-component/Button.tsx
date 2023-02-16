@@ -19,6 +19,13 @@ const Wrapper = styled.button<BtnProps>`
       color: blue;
       background-color: transparent;
     `}
+    ${props =>
+    props.variant === 'warning' &&
+    css`
+      border: none;
+      color: ivory;
+      background-color: red;
+    `}
 `;
 
 function Button({variant, disabled, children}: BtnProps): JSX.Element {

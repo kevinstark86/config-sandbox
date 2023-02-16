@@ -1,5 +1,5 @@
 export type BtnProps = {
-  variant: 'primary' | 'secondary';
+  variant: 'primary' | 'secondary' | 'warning';
   disabled: boolean;
   children: React.ReactNode;
 };
