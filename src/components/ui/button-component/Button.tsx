@@ -6,15 +6,13 @@ import {BtnProps} from './types';
 const Wrapper = styled.button<BtnProps>`
   padding: 10px 40px;
   border-radius: 5px;
+  cursor: pointer;
   ${props =>
     props.variant === 'primary' &&
     css`
       background-color: blue;
       color: ivory;
       border: none;
-      &:hover {
-        cursor: pointer;
-      }
     `}
   ${props =>
     props.variant === 'secondary' &&
@@ -22,9 +20,6 @@ const Wrapper = styled.button<BtnProps>`
       border: 2px solid blue;
       color: blue;
       background-color: transparent;
-      &:hover {
-        cursor: pointer;
-      }
     `}
     ${props =>
     props.variant === 'warning' &&
@@ -32,9 +27,6 @@ const Wrapper = styled.button<BtnProps>`
       border: none;
       color: ivory;
       background-color: red;
-      &:hover {
-        cursor: pointer;
-      }
     `}
     ${props =>
     props.disabled === true &&

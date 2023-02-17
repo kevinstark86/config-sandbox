@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render test 1`] = `
+.c0 {
+  padding: 10px 40px;
+  border-radius: 5px;
+  background-color: blue;
+  color: ivory;
+  border: none;
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+<button
+  className="c0"
+  disabled={false}
+  type="button"
+>
+  Click Me
+</button>
+`;
