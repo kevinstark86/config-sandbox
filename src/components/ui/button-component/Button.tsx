@@ -37,9 +37,9 @@ const Wrapper = styled.button<BtnProps>`
     `}
 `;
 
-function Button({variant, disabled, children}: BtnProps): JSX.Element {
+function Button({variant, disabled, onClick, children}: BtnProps): JSX.Element {
   return (
-    <Wrapper variant={variant} disabled={disabled} type="button">
+    <Wrapper variant={variant} disabled={disabled} onClick={onClick} type="button">
       {children}
     </Wrapper>
   );
