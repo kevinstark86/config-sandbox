@@ -19,6 +19,7 @@
       "@/*": ["./src/*"]
     }
   },
+  "types": ["jest", "@types/testing-library__jest-dom", "node"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.config.js"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "cypress", "./cypress.config.ts"]
 }

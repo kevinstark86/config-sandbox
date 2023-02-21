@@ -1,12 +1,14 @@
 /* eslint-disable import/no-extraneous-dependencies */
+import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
+import {expect} from '@jest/globals';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
+/* import renderer from 'react-test-renderer'; */
 import Button from '../Button';
 
-describe('render variant styles', () => {
+/* describe('render variant styles', () => {
   test('primary variant', () => {
     const tree = renderer
       .create(
@@ -81,4 +83,19 @@ describe('button functionality', () => {
     userEvent.click(button);
     expect(mockOnClickFunction).toBeCalled();
   });
+});
+ */
+
+test('onClick fires when clicked', () => {
+  const mockOnClickFunction = jest.fn();
+  render(
+    <Button variant="primary" disabled={false} onClick={mockOnClickFunction}>
+      Click Me
+    </Button>
+  );
+  const button = screen.getByRole('button', {name: /click me/i});
+  expect(button).toBeInTheDocument();
+  expect(button).toHaveTextContent(/click me/i);
+  userEvent.click(button);
+  expect(mockOnClickFunction).toBeCalled();
 });
